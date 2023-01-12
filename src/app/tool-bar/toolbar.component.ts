@@ -8,29 +8,20 @@ let currentDayCount = 0;
   styleUrls: ['./toolbar.component.css']
 })
 
-export class ToolbarComponent implements OnInit{
-  
+export class ToolbarComponent implements OnInit {
+
   currentTime = formatDate(Date.now(), 'hh:mm:ss', 'en-US');
   todayDay = Number(formatDate(Date.now(), 'dd', 'en-US'));
 
 
 
-ngOnInit(): void {
-  setInterval(()=>{
-    this.currentTime = formatDate(Date.now(), 'hh:mm:ss', 'en-US');
-    this.todayDay = Number(formatDate(Date.now(), 'dd', 'en-US'));
-  }, 1000);
- 
-}
-    
+  ngOnInit(): void {
+    setInterval(() => {
+      this.currentTime = formatDate(Date.now(), 'hh:mm:ss', 'en-US');
+      this.todayDay = Number(formatDate(Date.now(), 'dd', 'en-US'));
+    }, 1000);
 
-
-  
-  
-
-
-   
-  
+  }
 
 
 }
